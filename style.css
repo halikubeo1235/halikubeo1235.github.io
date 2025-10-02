@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset mặc định */
 * {
   margin: 0;
   padding: 0;
@@ -6,80 +6,88 @@
   font-family: Arial, sans-serif;
 }
 
+/* Toàn bộ trang */
 body {
-  background: linear-gradient(135deg, #74ebd5, #9face6);
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
   color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-header h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-}
-header span {
-  color: #2980b9;
-}
-
-/* Sections */
-section {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px auto;
-  max-width: 800px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-section h2 {
-  margin-bottom: 15px;
-  color: #2c3e50;
-}
-
-/* Gallery */
-.images {
+  min-height: 100vh;
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.images img {
-  width: 30%;
+
+/* Container chính */
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Tiêu đề */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Các phần */
+.section {
+  margin: 30px 0;
+  text-align: left;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+/* Gallery ảnh */
+.gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.3s;
-}
-.images img:hover {
-  transform: scale(1.05);
 }
 
 /* Video */
 iframe {
   width: 100%;
-  border-radius: 8px;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
 }
 
-/* Button */
+/* Nút */
 button {
-  padding: 10px 20px;
-  background: #2980b9;
-  color: white;
+  padding: 12px 24px;
+  background: #3498db;
   border: none;
   border-radius: 8px;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
+
 button:hover {
-  background: #1f6391;
+  background: #2980b9;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 0.9rem;
   color: #555;
 }
